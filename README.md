@@ -70,7 +70,7 @@ npm run start
 
 ```
 src/
-├── app/                 # Next.js App Router
+├── app/                # Next.js App Router
 │   ├── layout.tsx      # Root layout with metadata
 │   └── page.tsx        # Home page
 ├── components/         # React components
@@ -230,4 +230,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Made with ❤️ and Next.js
+Made with ❤️ and Next.js by [Antoine Ancelin](https://github.com/antancelin)
