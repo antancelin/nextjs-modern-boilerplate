@@ -22,3 +22,8 @@ export interface SiteConfig {
   };
   defaultSEO: SEOData;
 }
+
+export interface PageData {
+  seo: SEOData;
+  content?: Record<string, unknown>;
+}
