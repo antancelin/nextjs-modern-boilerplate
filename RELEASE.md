@@ -37,10 +37,17 @@ git commit -m "fix(ui): correct button alignment issue"
 # New feature (MINOR)
 git commit -m "feat(auth): add OAuth login support"
 
-# Breaking change (MAJOR)
+# Breaking change (MAJOR) - Multi-line commit
 git commit -m "feat(api): change authentication method
 
 BREAKING CHANGE: API endpoints now require JWT tokens instead of API keys"
+
+# Alternative: Using git commit without -m for multi-line
+git commit
+# Then write in the editor:
+# feat(api): change authentication method
+#
+# BREAKING CHANGE: API endpoints now require JWT tokens instead of API keys
 ```
 
 ### Automated process
