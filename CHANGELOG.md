@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/antancelin/nextjs-modern-landing/compare/v1.1.0...v2.0.0) (2025-06-15)
+
+
+### Features
+
+* transform to minimalist tech showcase boilerplate. BREAKING CHANGE: Complete architectural overhaul from complex landing page to minimalist design. ([9f24f91](https://github.com/antancelin/nextjs-modern-landing/commit/9f24f911309d5c48a20447d0b043efe324703367))
+
+
+### BREAKING CHANGES
+
+* Complete architectural overhaul from complex landing page to minimalist design.
+
+* feat(types): add PageData interface for SEO and content management
+
 # [1.1.0](https://github.com/antancelin/nextjs-modern-landing/compare/v1.0.0...v1.1.0) (2025-06-15)
 
 
