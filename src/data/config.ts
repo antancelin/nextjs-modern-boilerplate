@@ -1,29 +1,30 @@
 import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "My Company",
-  domain: "mycompany.com",
+  name: "Modern Web Boilerplate",
+  domain: "localhost:3000",
   locale: "en-US",
   social: {
-    instagram: "@mycompany",
-    linkedin: "company/my-company",
-    twitter: "@mycompany",
+    instagram: "@your-handle",
+    linkedin: "company/your-company",
+    twitter: "@your-handle",
   },
   defaultSEO: {
-    title: "My Company - Professional Services",
+    title: "Modern Web Boilerplate - Next.js, TypeScript, Tailwind",
     description:
-      "My Company provides professional services to help you achieve your goals with personalized solutions.",
+      "A modern boilerplate to quickly start your web projects with Next.js, TypeScript, Tailwind CSS and shadcn/ui.",
     keywords: [
-      "professional services",
-      "consulting",
-      "business",
-      "solutions",
-      "company",
+      "boilerplate",
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "web development",
     ],
     openGraph: {
-      title: "My Company - Professional Services",
+      title: "Modern Web Boilerplate",
       description:
-        "Transform your business with our professional services and personalized approach",
+        "Modern starting point for your web projects with the best technologies",
       image: "/images/og-default.jpg",
     },
   },

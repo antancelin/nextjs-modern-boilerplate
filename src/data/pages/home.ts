@@ -2,25 +2,14 @@ import { PageData } from "@/types";
 
 export const homePageData: PageData = {
   seo: {
-    title: "Welcome to My Company",
+    title: "Modern Web Boilerplate",
     description:
-      "Discover our professional services and how we can help you achieve your goals.",
-    keywords: ["landing page", "services", "professional", "company"],
+      "A solid starting point for your web projects with Next.js, TypeScript, Tailwind CSS and shadcn/ui.",
+    keywords: ["boilerplate", "nextjs", "typescript", "tailwind", "shadcn"],
     openGraph: {
-      title: "My Company - Professional Services",
-      description: "Transform your business with our professional approach",
+      title: "Modern Web Boilerplate",
+      description: "Get started quickly with the best web technologies",
       image: "/images/og-home.jpg",
-    },
-  },
-  hero: {
-    title: "Welcome to My Company",
-    subtitle: "Professional Services",
-    description:
-      "We provide exceptional services to help you achieve your goals with our expertise and personalized approach.",
-    ctaButton: {
-      text: "Get Started",
-      href: "#contact",
-      variant: "primary",
     },
   },
 };

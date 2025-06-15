@@ -1,28 +1,15 @@
-# 🚀 Next.js Landing Page Boilerplate
+# 🚀 Modern Web Boilerplate
 
-A modern, responsive landing page template built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Perfect for creating professional landing pages quickly.
+A minimalist and modern boilerplate to quickly start your web projects with the best technologies.
 
-## ✨ Features
+## ✨ Included Technologies
 
-- **🎯 Data-Driven Architecture**: Content managed through configuration files
-- **🚀 SEO Optimized**: Automatic metadata generation with Next.js native features
-- **📱 Responsive Design**: Mobile-first approach with Tailwind CSS
-- **⚡ High Performance**: Next.js 15 with App Router (SSR/SSG)
-- **🎨 Modern UI**: Clean interface built with shadcn/ui components
-- **🔧 Highly Customizable**: Easy to configure and extend
-- **📊 Analytics Ready**: Vercel Analytics integration included
-- **🌙 TypeScript**: Full type safety throughout the project
-
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js](https://nextjs.org/) 15 (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) 4
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
-- **Fonts**: [Geist](https://vercel.com/font) (Sans & Mono)
+- **⚡ Next.js 15** - React framework with App Router
+- **🔷 TypeScript** - Static typing for more robustness
+- **🎨 Tailwind CSS 4** - Modern utility-first CSS framework
+- **🎭 shadcn/ui** - Elegant and accessible UI components
+- **📊 Vercel Analytics** - Built-in analytics
+- **🎯 SEO Ready** - SEO optimization with next-seo
 
 ## 🚀 Quick Start
 
@@ -66,30 +53,31 @@ npm run build
 npm run start
 ```
 
+## 📝 Customization
+
+### 1. Modify the appearance
+
+Edit the main page in `src/app/page.tsx`
+
+### 2. Configure the site
+
+Update the configuration in `src/data/config.ts`
+
+### 3. Customize metadata
+
+Modify SEO data in `src/data/pages/home.ts`
+
 ## 📁 Project Structure
 
 ```
 src/
-├── app/                # Next.js App Router
-│   ├── layout.tsx      # Root layout with metadata
-│   └── page.tsx        # Home page
-├── components/         # React components
-│   ├── ui/             # shadcn/ui components
-│   ├── Header.tsx      # Navigation header
-│   ├── Hero.tsx        # Hero section
-│   └── Footer.tsx      # Footer section
-├── data/               # Configuration files (Data-driven)
-│   ├── config.ts       # Global site configuration
-│   └── pages/
-│       └── home.ts     # Home page data
-├── lib/                # Utility functions
-│   ├── seo.ts          # SEO helpers
-│   ├── socials.ts      # Social media utilities
-│   └── utils.ts        # General utilities
-├── styles/             # Global styles
-│   └── globals.css     # Tailwind + custom styles
-└── types/              # TypeScript type definitions
-    └── index.ts        # Shared interfaces
+├── app/               # Next.js pages (App Router)
+├── components/        # React components
+│   └── ui/            # shadcn/ui components
+├── data/              # Configuration and data
+├── lib/               # Utilities
+├── styles/            # Global styles
+└── types/             # TypeScript definitions
 ```
 
 ## 🎯 Customization Guide
@@ -132,16 +120,6 @@ export const homePageData: PageData = {
     description: "Your page description",
     keywords: ["landing page", "your", "keywords"],
   },
-  hero: {
-    title: "Your Hero Title",
-    subtitle: "Your Subtitle",
-    description: "Your hero description",
-    ctaButton: {
-      text: "Your Call to Action",
-      href: "#contact",
-      variant: "primary",
-    },
-  },
 };
 ```
 
@@ -163,14 +141,6 @@ The project uses Tailwind CSS with custom color variables. Update colors in `src
 - Add your images to `/public/images/`
 - Update image paths in your configuration files
 
-### 5. Customize Components
-
-The three main components can be easily customized:
-
-- **Header**: Update navigation links and branding
-- **Hero**: Modify the hero section content and layout
-- **Footer**: Add/remove footer sections and links
-
 ## 📊 SEO Features
 
 - ✅ Automatic meta tags generation
@@ -183,7 +153,7 @@ The three main components can be easily customized:
 
 ## 🌐 Social Media Integration
 
-Configure social media links in `src/data/config.ts`. The Footer component automatically generates social media icons and links.
+Configure social media links in `src/data/config.ts`.
 
 Supported platforms:
 
