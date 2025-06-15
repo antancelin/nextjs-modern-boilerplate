@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "semantic-release": "semantic-release",
-    "commitizen": "cz"
+    "commitizen": "cz",
+    "commitlint": "commitlint --from HEAD~1 --to HEAD"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

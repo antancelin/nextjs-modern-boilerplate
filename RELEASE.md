@@ -26,6 +26,7 @@ Use the following format for your commits:
 - **refactor**: Code refactoring
 - **test**: Adding tests
 - **chore**: Maintenance, build tasks, etc.
+- **ci**: Continuous integration changes
 
 #### Examples
 
