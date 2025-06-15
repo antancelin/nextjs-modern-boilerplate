@@ -1,12 +1,12 @@
 # Release Process
 
-Ce projet utilise [semantic-release](https://github.com/semantic-release/semantic-release) pour automatiser les releases basées sur les [Conventional Commits](https://www.conventionalcommits.org/).
+This project uses [semantic-release](https://github.com/semantic-release/semantic-release) to automate releases based on [Conventional Commits](https://www.conventionalcommits.org/).
 
-## Comment ça fonctionne
+## How it works
 
-### Commits conventionnels
+### Conventional Commits
 
-Utilisez le format suivant pour vos commits :
+Use the following format for your commits:
 
 ```
 <type>(<scope>): <description>
@@ -16,24 +16,24 @@ Utilisez le format suivant pour vos commits :
 [optional footer(s)]
 ```
 
-#### Types de commits et leur impact sur la version
+#### Commit types and their version impact
 
-- **fix**: Correction de bug → Version PATCH (1.0.0 → 1.0.1)
-- **feat**: Nouvelle fonctionnalité → Version MINOR (1.0.0 → 1.1.0)
-- **BREAKING CHANGE**: Changement cassant → Version MAJOR (1.0.0 → 2.0.0)
-- **docs**: Documentation uniquement
-- **style**: Formatage, points-virgules manquants, etc.
-- **refactor**: Refactoring du code
-- **test**: Ajout de tests
-- **chore**: Maintenance, tâches de build, etc.
+- **fix**: Bug fix → PATCH version (1.0.0 → 1.0.1)
+- **feat**: New feature → MINOR version (1.0.0 → 1.1.0)
+- **BREAKING CHANGE**: Breaking change → MAJOR version (1.0.0 → 2.0.0)
+- **docs**: Documentation only
+- **style**: Formatting, missing semicolons, etc.
+- **refactor**: Code refactoring
+- **test**: Adding tests
+- **chore**: Maintenance, build tasks, etc.
 
-#### Exemples
+#### Examples
 
 ```bash
-# Correction de bug (PATCH)
+# Bug fix (PATCH)
 git commit -m "fix(ui): correct button alignment issue"
 
-# Nouvelle fonctionnalité (MINOR)
+# New feature (MINOR)
 git commit -m "feat(auth): add OAuth login support"
 
 # Breaking change (MAJOR)
@@ -42,32 +42,46 @@ git commit -m "feat(api): change authentication method
 BREAKING CHANGE: API endpoints now require JWT tokens instead of API keys"
 ```
 
-### Processus automatisé
+### Automated process
 
-1. **Push sur main** : Chaque push sur la branche `main` déclenche le workflow de release
-2. **Analyse des commits** : semantic-release analyse les commits depuis la dernière release
-3. **Génération de version** : Calcul automatique de la nouvelle version basée sur les types de commits
-4. **Génération du changelog** : Création/mise à jour du fichier `CHANGELOG.md`
-5. **Création de la release** : Tag Git et release GitHub avec les notes de version
-6. **Commit des changements** : Commit automatique du changelog et du package.json mis à jour
+1. **Push to main**: Each push to the `main` branch triggers the release workflow
+2. **Commit analysis**: semantic-release analyzes commits since the last release
+3. **Version generation**: Automatic calculation of the new version based on commit types
+4. **Changelog generation**: Creation/update of the `CHANGELOG.md` file
+5. **Release creation**: Git tag and GitHub release with release notes
+6. **Commit changes**: Automatic commit of updated changelog and package.json
 
 ### Configuration
 
-- **`.releaserc`** : Configuration de semantic-release
-- **`.github/workflows/release.yaml`** : Workflow GitHub Actions
-- **`package.json`** : Dépendances et scripts
+- **`.releaserc`**: semantic-release configuration
+- **`.github/workflows/release.yaml`**: GitHub Actions workflow
+- **`package.json`**: Dependencies and scripts
+- **`commitlint.config.js`**: Commit message validation
 
-### Branches et déploiement
+### Branches and deployment
 
-- **main** : Branche de production, releases automatiques
-- **develop/feature branches** : Pas de release automatique
+- **main**: Production branch, automatic releases
+- **develop/feature branches**: No automatic release
 
-### Permissions requises
+### Required permissions
 
-Le workflow nécessite les permissions suivantes :
+The workflow requires the following permissions:
 
-- `contents: write` - Pour créer les tags et commits
-- `issues: write` - Pour commenter les issues liées
-- `pull-requests: write` - Pour commenter les PRs liées
+- `contents: write` - To create tags and commits
+- `issues: write` - To comment on related issues
+- `pull-requests: write` - To comment on related PRs
 
-Ces permissions sont configurées dans le workflow et utilisent le token `GITHUB_TOKEN` automatique.
+These permissions are configured in the workflow and use the automatic `GITHUB_TOKEN`.
+
+### Usage
+
+```bash
+# Use commitizen for guided conventional commits
+npm run commitizen
+
+# Validate commit messages
+npx commitlint --from HEAD~1 --to HEAD
+
+# Manual release (not recommended, use automatic releases)
+npm run semantic-release
+```
