@@ -10,25 +10,6 @@ export interface SEOData {
   };
 }
 
-export interface NavigationItem {
-  label: string;
-  href: string;
-  description?: string;
-  external?: boolean;
-}
-
-export interface HeroSection {
-  title: string;
-  subtitle?: string;
-  description: string;
-  ctaButton?: {
-    text: string;
-    href: string;
-    variant?: "primary" | "secondary";
-  };
-  backgroundImage?: string;
-}
-
 export interface SiteConfig {
   name: string;
   domain: string;
@@ -40,10 +21,4 @@ export interface SiteConfig {
     twitter?: string;
   };
   defaultSEO: SEOData;
-}
-
-export interface PageData {
-  seo: SEOData;
-  hero?: HeroSection;
-  content?: Record<string, unknown>;
 }
