@@ -137,7 +137,7 @@ The project uses Tailwind CSS with custom color variables. Update colors in `src
 
 ### 4. Add Your Logo and Images
 
-- Replace favicon files in `/public/favicon/`
+- Replace favicon files in `/public/favicon/` (use a high quality svg with [Real Favicon Generator](https://realfavicongenerator.net/))
 - Add your images to `/public/images/`
 - Update image paths in your configuration files
 
