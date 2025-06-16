@@ -19,7 +19,7 @@ export default function Home() {
           </h2>
           <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto">
             A solid starting point for your web projects with the best
-            technologies
+            technologies.
           </p>
         </div>
 
