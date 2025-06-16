@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/antancelin/nextjs-modern-landing/compare/v2.0.0...v2.0.1) (2025-06-16)
+
+
+### Bug Fixes
+
+* **page:** correct punctuation in introductory paragraph ([f16acaf](https://github.com/antancelin/nextjs-modern-landing/commit/f16acaf0fa4d3d77538394e57320b227d599444c))
+
 # [2.0.0](https://github.com/antancelin/nextjs-modern-landing/compare/v1.1.0...v2.0.0) (2025-06-15)
 
 
