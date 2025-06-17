@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.0.1...v2.1.0) (2025-06-17)
+
+
+### Features
+
+* rename project to nextjs-modern-boilerplate ([80ed95a](https://github.com/antancelin/nextjs-modern-boilerplate/commit/80ed95a66fdaa022a18652d5f3ddd95d4067b365))
+
 ## [2.0.1](https://github.com/antancelin/nextjs-modern-landing/compare/v2.0.0...v2.0.1) (2025-06-16)
 
 
