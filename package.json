@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-landing-boilerplate",
+  "name": "nextjs-modern-boilerplate",
   "version": "2.0.1",
   "private": true,
-  "description": "A modern Next.js boilerplate for landing pages with TypeScript, Tailwind CSS, and shadcn/ui",
+  "description": "A modern Next.js boilerplate for web projects with TypeScript, Tailwind CSS, and shadcn/ui",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

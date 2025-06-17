@@ -18,7 +18,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 ```bash
 # Clone this repository
 git clone <your-repo-url>
-cd nextjs-landing-boilerplate
+cd nextjs-modern-boilerplate
 
 # Or use as GitHub template
 # Click "Use this template" button on GitHub
