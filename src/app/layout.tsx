@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   title: {
     default: siteConfig.defaultSEO.title,
     template: `%s | ${siteConfig.name}`,
@@ -26,14 +29,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    url: `https://${siteConfig.domain}`,
+    url: "/",
     siteName: siteConfig.name,
     title: siteConfig.defaultSEO.openGraph?.title,
     description: siteConfig.defaultSEO.openGraph?.description,
     images: siteConfig.defaultSEO.openGraph?.image
       ? [
           {
-            url: `https://${siteConfig.domain}${siteConfig.defaultSEO.openGraph.image}`,
+            url: siteConfig.defaultSEO.openGraph.image,
             width: 1200,
             height: 630,
             alt: siteConfig.defaultSEO.openGraph.title,
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
     description: siteConfig.defaultSEO.description,
     creator: siteConfig.social.twitter,
     images: siteConfig.defaultSEO.openGraph?.image
-      ? [`https://${siteConfig.domain}${siteConfig.defaultSEO.openGraph.image}`]
+      ? [siteConfig.defaultSEO.openGraph.image]
       : [],
   },
   robots: {

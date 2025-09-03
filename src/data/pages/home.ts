@@ -9,7 +9,7 @@ export const homePageData: PageData = {
     openGraph: {
       title: "Modern Web Boilerplate",
       description: "Get started quickly with the best web technologies",
-      image: "/images/og-home.jpg",
+      image: "/images/og-home.png",
     },
   },
 };

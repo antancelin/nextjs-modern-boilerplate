@@ -6,8 +6,6 @@ export function generateMetadata(
   seoData: SEOData,
   path: string = "/"
 ): Metadata {
-  const url = `https://${siteConfig.domain}${path}`;
-
   return {
     title: seoData.title,
     description: seoData.description,
@@ -17,14 +15,14 @@ export function generateMetadata(
     openGraph: {
       type: "website",
       locale: siteConfig.locale,
-      url: url,
+      url: path,
       siteName: siteConfig.name,
       title: seoData.openGraph?.title || seoData.title,
       description: seoData.openGraph?.description || seoData.description,
       images: seoData.openGraph?.image
         ? [
             {
-              url: `https://${siteConfig.domain}${seoData.openGraph.image}`,
+              url: seoData.openGraph.image,
               width: 1200,
               height: 630,
               alt: seoData.openGraph.title || seoData.title,
@@ -37,9 +35,7 @@ export function generateMetadata(
       title: seoData.title,
       description: seoData.description,
       creator: siteConfig.social.twitter,
-      images: seoData.openGraph?.image
-        ? [`https://${siteConfig.domain}${seoData.openGraph.image}`]
-        : [],
+      images: seoData.openGraph?.image ? [seoData.openGraph.image] : [],
     },
     robots: {
       index: true,
@@ -53,7 +49,7 @@ export function generateMetadata(
       },
     },
     alternates: {
-      canonical: url,
+      canonical: path,
     },
   };
 }

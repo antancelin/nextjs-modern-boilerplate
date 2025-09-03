@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
       title: "Modern Web Boilerplate",
       description:
         "Modern starting point for your web projects with the best technologies",
-      image: "/images/og-default.jpg",
+      image: "/images/og-default.png",
     },
   },
 };

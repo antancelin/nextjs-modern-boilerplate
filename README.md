@@ -9,7 +9,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 - **🎨 Tailwind CSS 4** - Modern utility-first CSS framework
 - **🎭 shadcn/ui** - Elegant and accessible UI components
 - **📊 Vercel Analytics** - Built-in analytics
-- **🎯 SEO Ready** - SEO optimization with next-seo
+- **🎯 SEO Ready** - Native Next.js Metadata API (metadataBase + URLs relatives)
 
 ## 🚀 Quick Start
 
@@ -17,7 +17,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 
 ```bash
 # Clone this repository
-git clone <your-repo-url>
+git clone https://github.com/antancelin/nextjs-modern-boilerplate.git
 cd nextjs-modern-boilerplate
 
 # Or use as GitHub template
@@ -34,7 +34,21 @@ yarn install
 pnpm install
 ```
 
-### 3. Start Development Server
+### 3. Environment
+
+Create `.env.example` at the project root:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+Create `.env.local` for local dev:
+
+```bash
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+### 4. Start Development Server
 
 ```bash
 npm run dev
@@ -46,11 +60,31 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 4. Build for Production
+### 5. Build for Production
 
 ```bash
 npm run build
 npm run start
+```
+
+## 🧩 How to use this template
+
+- Click “Use this template” on GitHub: [Use this template](https://github.com/antancelin/nextjs-modern-boilerplate/generate)
+- Create your new repository from the template
+- Clone your repo locally:
+
+```bash
+git clone <your-new-repo-url>
+cd <your-new-repo-name>
+```
+
+- Install dependencies and set the environment:
+
+```bash
+npm install
+cp .env.example .env.local
+# edit .env.local if needed
+npm run dev
 ```
 
 ## 📝 Customization
@@ -89,7 +123,6 @@ Edit `src/data/config.ts`:
 ```typescript
 export const siteConfig: SiteConfig = {
   name: "Your Company Name",
-  domain: "yourcompany.com",
   locale: "en-US", // or "fr-FR", "es-ES", etc.
   social: {
     instagram: "@yourcompany",
@@ -103,11 +136,13 @@ export const siteConfig: SiteConfig = {
     openGraph: {
       title: "Your Company - Social Media Title",
       description: "Description for social media shares",
-      image: "/images/og-default.jpg",
+      image: "/images/og-default.png",
     },
   },
 };
 ```
+
+Note: URLs are built using Next.js `metadataBase` from `NEXT_PUBLIC_SITE_URL` (see `src/app/layout.tsx`). Keep Open Graph images as relative paths (e.g., `/images/og-default.jpg`).
 
 ### 2. Customize Home Page Content
 
@@ -187,16 +222,16 @@ The project works on any platform that supports Next.js:
 4. Push to the branch
 5. Open a Pull Request
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 🔗 Links
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com)
 - [shadcn/ui](https://ui.shadcn.com)
 - [TypeScript](https://www.typescriptlang.org)
+
+## 📝 License
+
+Released under the MIT License. See `LICENSE` for details.
 
 ---
 
