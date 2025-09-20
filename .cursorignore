@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.vercel/
+.git/
+coverage/
+dist/
+public/**/*.{png,jpg,jpeg,svg,webp,ico}
+

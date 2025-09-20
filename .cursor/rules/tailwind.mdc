@@ -1,0 +1,27 @@
+---
+description: Règles Tailwind CSS v4 et tokens design
+globs:
+  - "src/**/*.{tsx,ts,css}"
+  - "postcss.config.mjs"
+alwaysApply: true
+---
+
+## Utilisation
+
+- Privilégier les classes utilitaires Tailwind pour le stylage des composants.
+- Composer les classes via `cn()` depuis `@/lib/utils`.
+
+## Tokens et thèmes
+
+- Les tokens OKLCH, radius et variantes dark sont définis dans `src/styles/globals.css`.
+- Respecter et réutiliser ces variables; éviter d’introduire des variables globales supplémentaires.
+
+## Variantes et responsivité
+
+- Utiliser les préfixes d’état (`hover:`, `focus:`, `active:`, `disabled:`) et de breakpoint (`sm:`, `md:`, `lg:`, etc.).
+- Éviter le CSS personnalisé si une classe utilitaire couvre le besoin.
+
+## PostCSS/Tailwind
+
+- Tailwind v4 est activé via `@tailwindcss/postcss` dans `postcss.config.mjs`.
+- Ne pas réintroduire de `tailwind.config` si non nécessaire; privilégier les directives existantes.

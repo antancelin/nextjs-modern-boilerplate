@@ -1,0 +1,27 @@
+---
+description: Règles UI pour shadcn (cva, variants, asChild)
+globs:
+  - "src/components/ui/**/*.{ts,tsx}"
+  - "src/components/**/*.{ts,tsx}"
+  - "src/lib/utils.ts"
+alwaysApply: true
+---
+
+## Composants UI
+
+- S’aligner sur le pattern `cva` pour gérer `variant` et `size`.
+- Exporter `{ Component, componentVariants }` quand pertinent; garder `displayName`.
+- Supporter `asChild` avec `@radix-ui/react-slot` si besoin, comme pour `Button`.
+
+## Classes & composition
+
+- Utiliser `cn()` pour fusionner classes utilitaires et variantes.
+- Ne pas ajouter de styles inline si une classe Tailwind existe.
+
+## Accessibilité
+
+- Vérifier focus states, aria-attributes, et tailles cliquables suffisantes.
+
+## Ajout de composants
+
+- Ajouter les nouveaux composants dans `src/components/ui`. Garder une API cohérente avec `Button`.
