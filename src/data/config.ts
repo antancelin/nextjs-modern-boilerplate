@@ -2,7 +2,6 @@ import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "Modern Web Boilerplate",
-  domain: "localhost:3000",
   locale: "en-US",
   social: {
     instagram: "@your-handle",

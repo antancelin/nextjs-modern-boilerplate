@@ -12,7 +12,6 @@ export interface SEOData {
 
 export interface SiteConfig {
   name: string;
-  domain: string;
   locale: string;
   social: {
     instagram?: string;

@@ -6,8 +6,8 @@ This directory contains all the images used in your landing page.
 
 ### SEO & Social Media
 
-- `og-default.jpg` (1200x630px) - Default Open Graph image
-- `og-home.jpg` (1200x630px) - Home page specific Open Graph image
+- `og-default.png` (1200x630px) - Default Open Graph image
+- `og-home.png` (1200x630px) - Home page specific Open Graph image
 
 ### Content Images
 
