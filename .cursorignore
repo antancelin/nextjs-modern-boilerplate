@@ -4,5 +4,15 @@ node_modules/
 .git/
 coverage/
 dist/
-public/**/*.{png,jpg,jpeg,svg,webp,ico}
+out/
+.turbo/
+.cache/
+*.log
+.DS_Store
 
+# secrets (gardez l'exemple)
+.env*
+!.env.example
+
+# assets lourds
+public/**/*.{png,jpg,jpeg,svg,webp,ico}pr
