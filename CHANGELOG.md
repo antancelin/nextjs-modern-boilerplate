@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.6...v2.1.7) (2025-10-11)
+
+
+### Bug Fixes
+
+* correct typo in .cursorignore for asset file types ([dbd62b8](https://github.com/antancelin/nextjs-modern-boilerplate/commit/dbd62b814af156993f89b571d28dea3d5c603bb5))
+
 ## [2.1.6](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.5...v2.1.6) (2025-10-11)
 
 ## [2.1.5](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.4...v2.1.5) (2025-09-28)
