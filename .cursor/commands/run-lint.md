@@ -7,18 +7,15 @@ You are responsible for running the lint command across the entire project to en
 ## Steps
 
 1. **Prepare Environment**
-
    - Verify that project dependencies are installed (`npm install`, `yarn install`, etc.).
    - Confirm the canonical lint command (e.g., `npm run lint` or `pnpm lint`) and whether `--fix` is available.
    - Double-check ignore files (.eslintignore, .prettierignore, etc.) so third-party directories stay excluded.
 
 2. **Run Lint Command**
-
    - Execute the primary command with autofix enabled when appropriate (`npm run lint -- --fix`).
    - Capture the full output: errors, warnings, and any files that were changed.
 
 3. **Review & Remediate**
-
    - Inspect remaining messages: items that cannot be auto-fixed, custom rule failures, files outside scope.
    - Fix the affected code manually or adjust rules/configuration only when justified and agreed on by the team.
    - When relaxing rules, document the rationale before updating configuration.
