@@ -1,26 +1,31 @@
-# 🚀 Modern Web Boilerplate
+# Modern Web Boilerplate
 
 A minimalist and modern boilerplate to quickly start your web projects with the best technologies.
 
-## ✨ Features
+## Features
 
-- ⚡ Next.js 15 (App Router)
-- 🔷 TypeScript (strict)
-- 🎨 Tailwind CSS v4 (utility-first, tokens OKLCH)
-- 🧩 shadcn/ui (cva variants, Button included)
-- 🌓 Dark mode built-in (next-themes + ThemeToggle)
-- 📊 Vercel Analytics (optional)
-- 🎯 SEO Ready (Next.js Metadata API, canonical, OG/Twitter)
-- 🤖 robots + sitemap auto (env-aware)
-- ✅ Quality & CI/CD (ESLint, CI on PRs, semantic-release on main)
-- 📝 Conventional Commits (commitlint + commitizen)
+- Next.js 15 (App Router)
+- TypeScript (strict mode)
+- Tailwind CSS v4 (utility-first, tokens OKLCH)
+- shadcn/ui (cva variants, Button included)
+- Dark mode built-in (next-themes + ThemeToggle)
+- Vercel Analytics (optional)
+- SEO Ready (Next.js Metadata API, canonical, OG/Twitter)
+- robots.txt + sitemap.xml auto-generated (env-aware)
+- Code Quality Tools
+  - ESLint (next/core-web-vitals + Prettier integration)
+  - Prettier (automatic code formatting)
+  - EditorConfig (cross-IDE consistency)
+  - Bundle Analyzer (optimize bundle size)
+- CI/CD Ready (lint + typecheck + build on PRs, semantic-release on main)
+- Conventional Commits (commitlint + commitizen)
 
-## ✅ Requirements
+## Requirements
 
 - Node.js ≥ 18.18 (recommended: 20 LTS)
 - npm, pnpm or yarn
 
-## 🚀 Quick Start
+## Quick Start
 
 Using this template:
 
@@ -45,19 +50,30 @@ npm run dev
 
 Open http://localhost:3000.
 
-## 🔧 Scripts
+## Available Scripts
 
 ```bash
+# Development
 npm run dev               # Start dev server
 npm run build             # Build production
 npm run start             # Start production server
-npm run lint              # Lint with ESLint (next/core-web-vitals)
+
+# Code Quality
+npm run lint              # Lint with ESLint (next/core-web-vitals + Prettier)
+npm run lint:fix          # Auto-fix ESLint errors
+npm run format            # Format code with Prettier
+npm run format:check      # Check code formatting (CI)
 npm run typecheck         # TypeScript type-check (no emit)
+
+# Bundle Analysis
+npm run analyze           # Analyze bundle size (opens visualization)
+
+# Release Management
 npm run commitizen        # Guided conventional commits (cz)
 npm run semantic-release  # Manual release (CI handles automatic releases)
 ```
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 src/
@@ -91,7 +107,7 @@ Other notable files:
 - `components.json`: shadcn config (points to `src/styles/globals.css`)
 - `postcss.config.mjs`: Tailwind v4 via `@tailwindcss/postcss`
 
-## 🌈 Styling & Theming (Tailwind v4 + OKLCH)
+## Styling & Theming (Tailwind v4 + OKLCH)
 
 Global tokens live in `src/styles/globals.css`. Customize your brand by editing `:root` (light) and `.dark` (dark):
 
@@ -112,7 +128,7 @@ Global tokens live in `src/styles/globals.css`. Customize your brand by editing 
 
 - Use Tailwind tokens (e.g., `text-foreground`, `text-muted-foreground`, `bg-secondary`, `text-secondary-foreground`) instead of fixed `text-gray-*` to auto-adapt to dark mode.
 
-## 🌓 Dark Mode
+## Dark Mode
 
 - Provided via `next-themes` with a `ThemeProvider` (in `layout.tsx`).
 - Ready-to-use `ThemeToggle` in `src/components/ui/theme-toggle.tsx`.
@@ -133,7 +149,7 @@ export default function Page() {
 }
 ```
 
-## 🔎 SEO
+## SEO
 
 - Global SEO config: `src/data/config.ts` (`siteConfig.defaultSEO`)
 - Per-page SEO data: `src/data/pages/*` via `generateMetadata(seoData, path)` (`src/lib/seo.ts`)
@@ -147,26 +163,59 @@ Environment:
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-## 🧩 UI Components (shadcn/ui)
+## UI Components (shadcn/ui)
 
 - `button.tsx` shows the `cva` pattern with `variant`, `size`, and `cn()`.
 - Add new components in `src/components/ui/` and keep APIs consistent with `Button`.
 
-## 🧪 Quality & CI/CD
+## Code Quality & CI/CD
 
-- ESLint: `next/core-web-vitals`
-- CI (PRs): `lint` + `typecheck` + `build`
-- Releases (main): semantic-release (analyzes commits, updates changelog, creates GitHub release)
+### Code Quality Tools
 
-Conventional commits:
+**ESLint**
+
+- Configuration: `next/core-web-vitals` + Prettier integration
+- Auto-fix: `npm run lint:fix`
+- Integrated with Prettier to avoid conflicts
+
+**Prettier**
+
+- Automatic code formatting
+- Configuration in `.prettierrc.json`
+- Format all: `npm run format`
+- Check formatting: `npm run format:check` (useful for CI)
+
+**EditorConfig**
+
+- Cross-IDE consistency (VS Code, WebStorm, Vim, etc.)
+- Enforces indentation, charset, line endings
+- Configuration in `.editorconfig`
+
+**Bundle Analyzer**
+
+- Visualize bundle composition
+- Identify large dependencies
+- Optimize code splitting
+- Run: `npm run analyze` (opens interactive treemap)
+
+### CI/CD Pipeline
+
+- **Pull Requests**: Automated checks run `lint`, `typecheck`, and `build`
+- **Main Branch**: Semantic-release analyzes commits, updates changelog, creates GitHub releases
+
+### Conventional Commits
+
+Use commitizen for guided conventional commits:
 
 ```bash
 npm run commitizen
-# Example:
+# Example outputs:
 # feat(ui): add ThemeToggle component
+# fix(seo): correct canonical URL generation
+# docs: update README with new scripts
 ```
 
-## 🎯 Customization Guide
+## Customization Guide
 
 ### 1. Update Site Configuration
 
@@ -226,29 +275,29 @@ Edit `src/styles/globals.css` tokens (see Styling & Theming section):
 
 See the Assets section below for guidance and sizes.
 
-## 🖼️ Assets
+## Assets
 
 - Replace favicon files in `/public/favicon/`
 - OG images in `/public/images/`:
   - `og-default.png` (1200×630)
   - `og-home.png` (1200×630)
 
-## 🚢 Deployment
+## Deployment
 
 - Recommended: Vercel (Connect repo → Deploy)
 - Also works on Netlify, Railway, DigitalOcean App Platform, AWS Amplify
 
-## 🔗 Links
+## Links
 
 - Next.js Documentation: https://nextjs.org/docs
 - Tailwind CSS: https://tailwindcss.com
 - shadcn/ui: https://ui.shadcn.com
 - TypeScript: https://www.typescriptlang.org
 
-## 📝 License
+## License
 
 MIT — see `LICENSE`
 
 ---
 
-Made with ❤️ and Next.js by [Antoine Ancelin](https://github.com/antancelin)
+Made with Next.js by [Antoine Ancelin](https://github.com/antancelin)
