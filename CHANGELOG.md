@@ -1,3 +1,5 @@
+## [2.1.6](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.5...v2.1.6) (2025-10-11)
+
 ## [2.1.5](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.4...v2.1.5) (2025-09-28)
 
 ## [2.1.4](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.3...v2.1.4) (2025-09-22)
