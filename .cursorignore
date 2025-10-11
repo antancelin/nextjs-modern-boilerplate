@@ -15,4 +15,4 @@ out/
 !.env.example
 
 # assets lourds
-public/**/*.{png,jpg,jpeg,svg,webp,ico}pr
+public/**/*.{png,jpg,jpeg,svg,webp,ico}
