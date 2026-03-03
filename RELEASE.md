@@ -57,13 +57,12 @@ git commit
 3. **Version generation**: Automatic calculation of the new version based on commit types
 4. **Changelog generation**: Creation/update of the `CHANGELOG.md` file
 5. **Release creation**: Git tag and GitHub release with release notes
-6. **Commit changes**: Automatic commit of updated changelog and package.json
+6. **Commit changes**: Automatic commit of configured release assets (currently `CHANGELOG.md`)
 
 ### Configuration
 
-- **`.releaserc`**: semantic-release configuration
+- **`package.json` (`release`)**: semantic-release configuration (branches + plugins)
 - **`.github/workflows/release.yaml`**: GitHub Actions workflow
-- **`package.json`**: Dependencies and scripts
 - **`commitlint.config.js`**: Commit message validation
 
 ### Branches and deployment
