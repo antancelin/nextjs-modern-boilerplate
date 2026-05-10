@@ -4,7 +4,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 
 ## Features
 
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - TypeScript (strict mode)
 - Tailwind CSS v4 (utility-first, tokens OKLCH)
 - shadcn/ui (cva variants, Button included)
@@ -22,7 +22,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 
 ## Requirements
 
-- Node.js ≥ 18.18 (recommended: 20 LTS)
+- Node.js ≥ 22 (recommended: 22 LTS)
 - npm, pnpm or yarn
 
 ## Quick Start
