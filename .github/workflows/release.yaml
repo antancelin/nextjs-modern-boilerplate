@@ -24,6 +24,9 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
+      - name: Debug app installation ID
+        run: echo "Installation ID ${{ steps.app-token.outputs.installation-id }}"
+
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
