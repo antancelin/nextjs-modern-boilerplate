@@ -21,43 +21,27 @@ Use the following format for your commits:
 - **fix**: Bug fix → PATCH version (1.0.0 → 1.0.1)
 - **feat**: New feature → MINOR version (1.0.0 → 1.1.0)
 - **BREAKING CHANGE**: Breaking change → MAJOR version (1.0.0 → 2.0.0)
-- **docs**: Documentation only
+- **docs**: Documentation only → PATCH version
+- **chore**: Maintenance, build tasks, etc. → PATCH version
+- **refactor**: Code refactoring → PATCH version
 - **style**: Formatting, missing semicolons, etc.
-- **refactor**: Code refactoring
-- **test**: Adding tests
-- **chore**: Maintenance, build tasks, etc.
 - **ci**: Continuous integration changes
 
 #### Examples
 
 ```bash
-# Bug fix (PATCH)
 git commit -m "fix(ui): correct button alignment issue"
-
-# New feature (MINOR)
 git commit -m "feat(auth): add OAuth login support"
-
-# Breaking change (MAJOR) - Multi-line commit
-git commit -m "feat(api): change authentication method
-
-BREAKING CHANGE: API endpoints now require JWT tokens instead of API keys"
-
-# Alternative: Using git commit without -m for multi-line
-git commit
-# Then write in the editor:
-# feat(api): change authentication method
-#
-# BREAKING CHANGE: API endpoints now require JWT tokens instead of API keys
+git commit -m "chore(deps): update react to 19.2.0"
+git commit -m "docs(readme): update installation instructions"
 ```
 
 ### Automated process
 
-1. **Push to main**: Each push to the `main` branch triggers the release workflow
+1. **Push to main**: Each push to `main` triggers the release workflow
 2. **Commit analysis**: semantic-release analyzes commits since the last release
 3. **Version generation**: Automatic calculation of the new version based on commit types
-4. **Changelog generation**: Creation/update of the `CHANGELOG.md` file
-5. **Release creation**: Git tag and GitHub release with release notes
-6. **Commit changes**: Automatic commit of configured release assets (currently `CHANGELOG.md`)
+4. **Release creation**: GitHub Release created with auto-generated notes — no commits pushed back to `main`
 
 ### Configuration
 
@@ -68,17 +52,17 @@ git commit
 ### Branches and deployment
 
 - **main**: Production branch, automatic releases
-- **develop/feature branches**: No automatic release
+- **feature branches**: No automatic release, CI runs on PRs
 
 ### Required permissions
 
 The workflow requires the following permissions:
 
-- `contents: write` - To create tags and commits
-- `issues: write` - To comment on related issues
-- `pull-requests: write` - To comment on related PRs
+- `contents: write` — To create tags and GitHub Releases
+- `issues: write` — To comment on related issues
+- `pull-requests: write` — To comment on related PRs
 
-These permissions are configured in the workflow and use the automatic `GITHUB_TOKEN`.
+These permissions are configured in the workflow and use the built-in `GITHUB_TOKEN`.
 
 ### Usage
 
@@ -87,8 +71,5 @@ These permissions are configured in the workflow and use the automatic `GITHUB_T
 npm run commitizen
 
 # Validate commit messages
-npx commitlint --from HEAD~1 --to HEAD
-
-# Manual release (not recommended, use automatic releases)
-npm run semantic-release
+npm run commitlint
 ```
