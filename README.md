@@ -298,7 +298,8 @@ See the Assets section below for guidance and sizes.
 
 | Version | Date | Highlights |
 |---|---|---|
-| [2.1.13](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.12...v2.1.13) | 2026-05-10 | Update README (Next.js 16, Node 22) |
+| [2.1.15](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.14...v2.1.15) | 2026-05-10 | CI — GitHub Actions pinned to Node 24, GH_TOKEN for semantic-release, branch protection on main |
+| [2.1.14](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.13...v2.1.14) | 2026-05-10 | Update MIT license year and add changelog section to README |
 | [2.1.12](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.1.11...v2.1.12) | 2026-05-10 | Upgrade all deps — Next.js 16, React 19.2, TypeScript 6, Tailwind 4.3, lucide-react 1.x, ESLint flat config |
 | [2.1.0](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v2.0.1...v2.1.0) | 2025-06-17 | Rename project to `nextjs-modern-boilerplate` |
 | [2.0.0](https://github.com/antancelin/nextjs-modern-boilerplate/compare/v1.1.0...v2.0.0) | 2025-06-15 | Complete rewrite — minimalist tech showcase boilerplate |
