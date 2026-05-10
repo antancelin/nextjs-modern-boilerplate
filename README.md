@@ -296,14 +296,12 @@ See the Assets section below for guidance and sizes.
 
 ## Changelog
 
-| Version | Date | Highlights |
-|---|---|---|
-| [2.1.18](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.1.18) | 2026-05-10 | Update README — remove CHANGELOG.md, point to GitHub Releases |
-| [2.1.16](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.1.16) | 2026-05-10 | Remove @semantic-release/git — releases now tracked via GitHub Releases |
-| [2.1.15](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.1.15) | 2026-05-10 | CI — GitHub Actions pinned to Node 24, branch protection on main |
-| [2.1.12](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.1.12) | 2026-05-10 | Upgrade all deps — Next.js 16, React 19.2, TypeScript 6, Tailwind 4.3, lucide-react 1.x, ESLint flat config |
-| [2.1.0](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.1.0) | 2025-06-17 | Rename project to `nextjs-modern-boilerplate` |
-| [2.0.0](https://github.com/antancelin/nextjs-modern-boilerplate/releases/tag/v2.0.0) | 2025-06-15 | Complete rewrite — minimalist tech showcase boilerplate |
+- Migrated to GitHub-native releases — no bot commits to `main`, compatible with branch protection
+- Added CI workflow on pull requests (format, lint, typecheck, build)
+- Added branch protection on `main` — PR + CI required before merge
+- Upgraded all deps — Next.js 16, React 19.2, TypeScript 6, Tailwind 4.3, ESLint flat config
+- Rename project to `nextjs-modern-boilerplate`
+- Complete rewrite — minimalist tech showcase boilerplate
 
 See [GitHub Releases](https://github.com/antancelin/nextjs-modern-boilerplate/releases) for full history.
 
