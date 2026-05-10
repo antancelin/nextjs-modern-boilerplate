@@ -200,8 +200,8 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
 ### CI/CD Pipeline
 
-- **Pull Requests**: Automated checks run `lint`, `typecheck`, and `build`
-- **Main Branch**: Semantic-release analyzes commits, updates changelog, creates GitHub releases
+- **Pull Requests**: Automated checks run `format:check`, `lint`, `typecheck`, and `build`
+- **Main Branch**: Semantic-release analyzes commits and creates GitHub releases
 
 ### Conventional Commits
 
