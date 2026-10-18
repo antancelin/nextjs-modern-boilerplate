@@ -65,7 +65,7 @@
     "typescript": "^6.0.3"
   },
   "overrides": {
-    "handlebars": "^4.7.9",
+    "handlebars": "^4.7.10",
     "flatted": "^3.4.2",
     "postcss": "^8.5.10",
     "micromatch": {
