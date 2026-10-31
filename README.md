@@ -22,7 +22,7 @@ A minimalist and modern boilerplate to quickly start your web projects with the 
 
 ## Requirements
 
-- Node.js ≥ 22 (recommended: 22 LTS)
+- Node.js 26 LTS
 - npm, pnpm or yarn
 
 ## Quick Start
